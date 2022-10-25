@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Udema a modern educational site template">
+    <meta name="author" content="Ansonika">
+    <title>UDEMA | Modern Educational site template</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" th:href="@{/img/favicon.ico}">
+    <link rel="apple-touch-icon" type="image/x-icon" href="../static/img/apple-touch-icon-57x57-precomposed.png"
+          th:href="@{/img/apple-touch-icon-57x57-precomposed.png}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
+          href="../static/img/apple-touch-icon-72x72-precomposed.png"
+          th:href="@{/img/apple-touch-icon-72x72-precomposed.png}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+          href="../static/img/apple-touch-icon-114x114-precomposed.png"
+          th:href="@{/img/apple-touch-icon-114x114-precomposed.png}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+          href="../static/img/apple-touch-icon-144x144-precomposed.png"
+          th:href="@{/img/apple-touch-icon-144x144-precomposed.png}">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="../static/css/style.css" rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="../static/css/vendors.css" rel="stylesheet" th:href="@{/css/vendors.css}">
+    <link href="css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+
+    <!-- Icon admin fonts-->
+    <link href="../../static/admin_section/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css" th:href="@{/admin_section/vendor/font-awesome/css/font-awesome.min.css}">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="../static/css/custom.css" rel="stylesheet" th:href="@{/css/custom.css}">
+    <link href="../../static/admin_section/css/custom.css" rel="stylesheet" th:href="@{/admin_section/css/custom.css}">
+    <style>.lesson-des {padding-left:25pt; padding-top: 5pt; padding-right: 5pt}</style>
+    <style>.free-lesson {color: green; }</style>
+    <style>.not-free-lesson {color: red; opacity: 0.9;}</style>
+
+</head>
+
+<body>
+
+<div id="page" class="theia-exception">
+
+    <header class="header menu_2">
+        <div id="preloader">
+            <div data-loader="circle-side"></div>
+        </div><!-- /Preload -->
+        <div id="logo">
+            <a href="/"><img src="img/logo.png" width="149" height="42" alt=""></a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="/login" class="login">Login</a></li>
+            <li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
+            <li class="hidden_tablet"><a href="/login" class="btn_1 rounded">Admission</a></li>
+        </ul>
+        <!-- /top_menu -->
+        <a href="#menu" class="btn_mobile">
+            <div class="hamburger hamburger--spin" id="hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </a>
+        <nav id="menu" class="main-menu">
+            <ul>
+                <li><span><a href="#0">Home</a></span>
+                    <ul>
+                        <li><a href="/">Home version 1</a></li>
+                        <li><a href="index-2.html">Home version 2</a></li>
+                        <li><a href="index-6.html">Home version 3</a></li>
+                        <li><a href="index-3.html">Home version 4</a></li>
+                        <li><a href="index-4.html">Home version 5</a></li>
+                        <li><a href="index-5.html">With Cookie bar (EU law)</a></li>
+                    </ul>
+                </li>
+                <li><span><a href="#0">Courses</a></span>
+                    <ul>
+                        <li><a href="/coursesGrid">Courses grid</a></li>
+                        <li><a href="/coursesGridSidebar">Courses grid sidebar</a></li>
+                        <li><a href="/coursesList">Courses list</a></li>
+                        <li><a href="/courseDetail">Course detail</a></li>
+                        <li><a href="#">Courses list sidebar</a></li>
+                        <li><a href="#">Course detail working form</a></li>
+                        <li><a href="#">Admission wizard</a></li>
+                        <li><a href="#">Teacher detail</a></li>
+                    </ul>
+                </li>
+                <li><span><a href="#0">Pages</a></span>
+                    <ul>
+                        <li><a href="#0">Menu 2</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/registration">Register</a></li>
+                        <li><a href="/contacts">Contacts</a></li>
+                        <li><a href="/404">404 page</a></li>
+                        <li><a href="agenda-calendar.html">Agenda Calendar</a></li>
+                        <li><a href="faq.html">Faq</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </li>
+                <li><span><a href="#0">Extra Pages</a></span>
+                    <ul>
+                        <li><a href="media-gallery.html">Media gallery</a></li>
+                        <li><a href="cart-1.html">Cart page 1</a></li>
+                        <li><a href="cart-2.html">Cart page 2</a></li>
+                        <li><a href="cart-3.html">Cart page 3</a></li>
+                        <li><a href="pricing-tables.html">Responsive pricing tables</a></li>
+                        <li><a href="coming_soon/index.html">Coming soon</a></li>
+                        <li><a href="icon-pack-1.html">Icon pack 1</a></li>
+                        <li><a href="icon-pack-2.html">Icon pack 2</a></li>
+                        <li><a href="icon-pack-3.html">Icon pack 3</a></li>
+                        <li><a href="icon-pack-4.html">Icon pack 4</a></li>
+                    </ul>
+                </li>
+                <li><span><a href="#0">Buy template</a></span></li>
+            </ul>
+        </nav>
+        <!-- Search Menu -->
+        <div class="search-overlay-menu">
+            <span class="search-overlay-close"><span class="closebt"><i class="ti-close"></i></span></span>
+            <form role="search" id="searchform" method="get">
+                <input value="" name="q" type="search" placeholder="Search..."/>
+                <button type="submit"><i class="icon_search"></i>
+                </button>
+            </form>
+        </div><!-- End Search Menu -->
+    </header>
+    <!-- /header -->
+
+    <main>
+        <section id="hero_in" class="courses">
+            <div class="wrapper">
+                <div class="container">
+                    <h1 class="fadeInUp"><span></span>Online course detail</h1>
+                </div>
+            </div>
+        </section>
+        <!--/hero_in-->
+
+        <div class="bg_color_1">
+            <nav class="secondary_nav sticky_horizontal">
+                <div class="container">
+                    <ul class="clearfix">
+                        <li><a href="#description" class="active">Description</a></li>
+                        <li><a href="#lessons">Lessons</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container margin_60_35" th:object="${coursesTit}" >
+                <div class="row" >
+                    <div class="col-lg-8" >
+
+                        <section id="description" >
+                            <h2 th:text="${coursesTit?.title}">Description</h2>
+                            <p th:text="${coursesTit?.courseDetails?.description}"></p>
+
+
+                        </section>
+
+                        <section id="lessons" >
+                            <div class="intro_title" th:if="${sumLessons!=null}" th:with="s=${sumLessons%60}, m=${((sumLessons/60)%60)}, h=${((sumLessons/60))/60}">
+                                <h2>Lessons</h2 >
+                                <ul >
+                                    <li th:text="${countLessons+' lessons '}">18 lessons</li>
+                                    <li th:text="${h}+' h '+${m}+' m '+${s}+' s '">01:02:10</li>
+                                </ul>
+                            </div>
+<!--                            th:each=" cclt:${coursesTit.courseDetails.lessonTopics}"-->
+                            <div id="accordion_lessons" role="tablist" th:each="cclt, count: ${lesTopList}" th:with="kk=${count.index + 1}">
+                                <div class="card" >
+                                    <div class="card-header" role="tab" id="headingOne" >
+                                        <h5 class="mb-0" >
+                                            <div class="btn-link text-dark" style="padding-left: 13px; text-decoration: none;" data-bs-toggle="collapse" th:href="${'#collapseOne' + kk}" aria-expanded="false"><span th:text="${cclt?.name}"></span></div>
+                                        </h5>
+
+                                    </div>
+                                    <div th:id="${'collapseOne' + kk}" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-bs-parent="#accordion_lessons" >
+                                        <div th:each="ccltles: ${cclt?.lessonsList}"> <!--class="card-body"-->
+                                            <div class="list_lessons" th:with="sec=${ccltles.length%60},
+                                                                        min=${((ccltles.length/60)%60)},
+                                                                        hours=${((ccltles.length/60))/60}" >
+
+                                                <ul class="col-lg-12">
+                                                    <li th:if="${ccltles.free==true}">
+                                                        <button type="button" th:href="${ccltles.videoUrl}" class="col-lg-1 video btn btn-success btn-sm">FREE</button>
+                                                        <a style="padding-left: 10px;"></a><a th:href="${ccltles.videoUrl}" class="video text-uppercase" th:text="${ccltles.name}"></a><a th:text="${ccltles.description}" style="padding-left: 35px;"></a>
+                                                        <span th:text="${hours}+'h '+${min}+'m '+${sec}+'s'" style="padding-right: 10px;">00:59</span>
+                                                    </li>
+
+                                                    <li th:if="${ccltles.free==false}">
+                                                        <div th:if="${userBoughtCourse==false}">
+                                                            <button type="button" class="col-lg-1 btn btn-danger btn-sm">PAID</button>
+                                                            <a style="padding-left: 10px;"></a><a class="video text-uppercase" th:text="${ccltles.name}"></a><a th:text="${ccltles.description}" style="padding-left: 35px;"></a>
+                                                            <span th:text="${hours}+'h '+${min}+'m '+${sec}+'s'" style="padding-right: 10px;">00:59</span>
+                                                        </div>
+                                                        <div th:if="${userBoughtCourse==true}">
+                                                            <button type="button" th:href="${ccltles.videoUrl}" class="col-lg-1 video btn btn-success btn-sm">Bought</button>
+                                                            <a style="padding-left: 10px;"></a><a th:href="${ccltles.videoUrl}" class="video text-uppercase" th:text="${ccltles.name}"></a><a th:text="${ccltles.description}" style="padding-left: 35px;"></a>
+                                                            <span th:text="${hours}+'h '+${min}+'m '+${sec}+'s'" style="padding-right: 10px;">00:59</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add_bottom_45"></div>
+                        </section>
+                        <!-- /section -->
+
+                        <section id="reviews" >
+                            <h2>Reviews</h2>
+                            <div class="reviews-container" >
+                                <div class="row" >
+                                    <div class="col-lg-3" >
+                                        <div id="review_summary" >
+                                                <strong th:text="${rating}"></strong>
+
+                                            <!--RATING-->
+                                            <div class="rating" th:with="length=${#numbers.formatInteger(rating, 1)}">
+                                                <div th:with="result=${5 }-${ length}">
+                                                    <i th:if="${rating >= 0.55}" th:each="i : ${#numbers.sequence(1, length)}" class="rating"><i class="icon_star voted"></i></i><i th:if="${result > 0}" th:each="i : ${#numbers.sequence(1, result)}" class="rating"><i class="icon_star"></i></i>
+                                                </div>
+                                            </div>
+                                            <!--                                        RATING -->
+
+                                            <small th:text="${'Based on '+countRating+' reviews'}">Based on 4 reviews</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" th:style="${'width: ' + coursesTit.fiveStars + '%'}"
+                                                         aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" th:style="${'width: ' + coursesTit.fourStars + '%'}"
+                                                         aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" th:style="${'width: ' + coursesTit.threeStars + '%'}"
+                                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" th:style="${'width: ' + coursesTit.twoStars + '%'}"
+                                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" th:style="${'width: ' + coursesTit.oneStars + '%'}"
+                                                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                            </div>
+
+                            <hr>
+
+                            <div class="reviews-container" >
+                                <div class="review-box clearfix" th:each="rl :${reviewList}">
+                                    <figure class="rev-thumb"><img
+                                            src="http://via.placeholder.com/150x150/ccc/fff/avatar1.jpg" alt="">
+                                    </figure>
+                                    <div class="rev-content" >
+<!--                                        <div class="rating" >-->
+<!--                                            <span th:text="${rl?.rating}"></span>-->
+<!--                                            <i class="icon_star voted"></i><i class="icon_star voted"></i><i-->
+<!--                                                class="icon_star voted"></i><i class="icon_star voted"></i><i-->
+<!--                                                class="icon_star" ></i>-->
+<!--                                        </div>-->
+                                        <!--RATING-->
+                                        <div th:with="length=${#numbers.formatInteger(rl?.rating, 1)}">
+                                            <div th:with="result=${5 }-${ length}">
+                                                <i th:if="${rl?.rating >= 0.55}" th:each="i : ${#numbers.sequence(1, length)}" class="rating"><i class="icon_star voted"></i></i><i th:if="${result > 0}" th:each="i : ${#numbers.sequence(1, result)}" class="rating"><i class="icon_star"></i></i>
+                                            </div>
+                                        </div>
+<!--                                        RATING -->
+
+                                        <div class="rev-info">
+                                            <span th:text="${rl?.users?.username}"></span> - <span th:text="${rl?.timeStamp}"></span>
+                                        </div>
+                                        <div class="rev-text">
+                                            <p th:text="${rl?.review}">
+                                                Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar
+                                                hendrerit. Cum sociis natoque penatibus et magnis dis
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div th:if="${userCanLeaveFeedback==true}" >
+                            <form th:if="${userBoughtCourse==true}" th:action="@{/coursesDetails(courseTitle=${coursesTit.title})}" method="post" th:object="${newComment}">
+                                <div><!-- class="container-fluid"-->
+                                    <div class="box_general padding_bottom" >
+                                        <div class="header_box version_2">
+                                              <h6><i class="fa fa-file-text"></i> Leave a comment</h6>
+                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-15">
+                                                <div class="form-group">
+                                                    <span th:text="${comError}"></span>
+                                                     <input th:type="hidden" th:field="*{id}">
+    <!--                                                 <input th:field="*{rating}" min="1" max="5" type="number" class="form-control" placeholder="Rating">-->
+                                                    <fieldset th:field="*{rating}" class="rating-input">
+                                                        <input type="radio" value="5" id="stars-star5" name="rating">
+                                                        <label for="stars-star5" title="5 Stars"></label>
+                                                        <input type="radio" value="4" id="stars-star4" name="rating">
+                                                        <label for="stars-star4" title="4 Stars"></label>
+                                                        <input type="radio" value="3" id="stars-star3" name="rating">
+                                                        <label for="stars-star3" title="3 Stars"></label>
+                                                        <input type="radio" value="2" id="stars-star2" name="rating">
+                                                        <label for="stars-star2" title="2 Stars"></label>
+                                                        <input type="radio" value="1" id="stars-star1" name="rating">
+                                                        <label for="stars-star1" title="1 Stars"></label>
+                                                    </fieldset>
+
+                                                    <textarea th:field="*{review}" required type="text" class="form-control" placeholder="Leaving review I understand that my offensive comments or spam can be reported and deleted"></textarea>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <input class="btn_1 medium" type="submit" value="Submit"><br>
+                                        </div>
+                                     </div>
+                                </div>
+                            </form>
+                            </div>
+
+
+                            <!-- /review-container -->
+                        </section>
+                        <!-- /section -->
+                    </div>
+                    <!-- /col -->
+
+                    <aside class="col-lg-4" id="sidebar">
+                        <div class="box_detail">
+                            <figure>
+                                <a href="https://www.youtube.com/watch?v=LDgd_gUcqCw" class="video"><i
+                                        class="arrow_triangle-right"></i><img
+                                        src="http://via.placeholder.com/800x533/ccc/fff/course_1.jpg" alt=""
+                                        class="img-fluid"><span>View course preview</span></a>
+                            </figure>
+                            <div class="price" th:text="${coursesTit?.price+' €'}">
+                                $29<span class="original_price"><em>$49</em>60% discount price</span>
+                            </div>
+                            <p th:text="${error}"></p>
+                            <div th:if="${userBoughtCourse == false}">
+                            <a th:href="@{/buyCourse(courseTitle=${coursesTit.title})}" href="#0" class="btn_1 full-width">Purchase</a>
+                            </div>
+                            <div th:if="${userBoughtCourse == true}">
+                                <span><a class="btn_22 full-width">Purchased</a></span>
+                            </div>
+
+                            <a href="#0" class="btn_1 full-width outline"><i class="icon_heart"></i> Add to wishlist</a>
+                            <div id="list_feat">
+                                <h3>What's includes</h3>
+                                <ul>
+                                    <li><i class="icon_mobile"></i>Mobile support</li>
+                                    <li><i class="icon_archive_alt"></i>Lesson archive</li>
+                                    <li><i class="icon_mobile"></i>Mobile support</li>
+                                    <li><i class="icon_chat_alt"></i>Tutor chat</li>
+                                    <li><i class="icon_document_alt"></i>Course certificate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bg_color_1 -->
+    </main>
+    <!--/main-->
+
+    <footer>
+        <div class="container margin_120_95">
+            <div class="row justify-content-between">
+                <div class="col-lg-5 col-md-12">
+                    <p><img src="img/logo.png" width="149" height="42" alt=""></p>
+                    <p>Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id placerat tacimates definitionem
+                        sea, prima quidam vim no. Duo nobis persecuti cu. Nihil facilisi indoctum an vix, ut delectus
+                        expetendis vis.</p>
+                    <div class="follow_us">
+                        <ul>
+                            <li>Follow us</li>
+                            <li><a href="#0"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#0"><i class="ti-twitter-alt"></i></a></li>
+                            <li><a href="#0"><i class="ti-google"></i></a></li>
+                            <li><a href="#0"><i class="ti-pinterest"></i></a></li>
+                            <li><a href="#0"><i class="ti-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ml-lg-auto">
+                    <h5>Useful links</h5>
+                    <ul class="links">
+                        <li><a href="/login">Admission</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/registration">Register</a></li>
+                        <li><a href="#0">News &amp; Events</a></li>
+                        <li><a href="/contacts">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact with Us</h5>
+                    <ul class="contacts">
+                        <li><a href="tel://61280932400"><i class="ti-mobile"></i> + 61 23 8093 3400</a></li>
+                        <li><a href="mailto:info@udema.com"><i class="ti-email"></i> info@udema.com</a></li>
+                    </ul>
+                    <div id="newsletter">
+                        <h6>Newsletter</h6>
+                        <div id="message-newsletter"></div>
+                        <form method="post" action="assets/newsletter.php" name="newsletter_form" id="newsletter_form">
+                            <div class="form-group">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                       placeholder="Your email">
+                                <input type="submit" value="Submit" id="submit-newsletter">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <ul id="additional_links">
+                        <li><a href="#0">Terms and conditions</a></li>
+                        <li><a href="#0">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div id="copy">© Udema</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/footer-->
+</div>
+<!-- page -->
+
+<!-- COMMON SCRIPTS -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/common_scripts.js"></script>
+<script src="js/main.js"></script>
+<script src="assets/validate.js"></script>
+
+<script>document.getElementById("stars-star1").setAttribute("checked", "checked")</script>
+
+
+</body>
+</html>

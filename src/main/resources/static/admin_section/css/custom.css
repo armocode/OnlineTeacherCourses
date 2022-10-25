@@ -1,0 +1,116 @@
+/* YOUR CUSTOM CSS */
+text-color {
+    color: white;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.success {
+    background-color: #04AA6D;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/*editCourse*/
+.hiddenRow {
+    padding: 0 !important;
+}
+
+.btn-link:after {
+    content: '\2212';
+    font-size: 20px;
+    text-align: center;
+    left: 10px;
+    top: 7px;
+    position: absolute;
+}
+
+.btn-link.collapsed:after
+{
+    content: '\002B';
+}
+
+.btn-link2:after {
+    content: '\2212';
+    font-size: 20px;
+    text-align: center;
+    left: 65px;
+    top: 0px;
+    position: absolute;
+}
+
+.btn-link2.collapsed:after
+{
+    content: '\002B';
+}
+
+.btn-link3:after {
+    font-family: 'FontAwesome';
+    content: '\f077';
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn-link3.collapsed:after
+{
+
+    content: '\f078';
+}
+
+/*---animation for text---*/
+.animT::before {
+    content: "Create";
+    animation: animate infinite 5s;
+    /*padding-left: 10px;*/
+}
+
+@keyframes animate {
+
+    33% {
+        content: "Check";
+    }
+
+    66% {
+        content: "Delete";
+    }
+}
+/*---animation for text---*/
+
+/*---animation for icon---*/
+.animI::before {
+    content: "\f055";
+    animation: animateI infinite 5s;
+    /*padding-left: 10px;*/
+}
+
+@keyframes animateI {
+
+    33% {
+        content: "\f058";
+    }
+
+    66% {
+        content: "\f056";
+    }
+}
+/*---animation for icon---*/
